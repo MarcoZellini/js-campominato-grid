@@ -30,11 +30,11 @@ function generateField(elementDOM, row, column) {
         for (let j = 0; j < column; j++) {
             const cellElement = document.createElement('div');
             cellElement.classList.add('cell');
-            cellElement.append((i+1) * (j+1));
+            cellElement.append(((i*10) + (j + 1)));
     
             cellElement.addEventListener('click', function () {
                 this.classList.toggle('bg_lightblue');
-                console.log('Hai cliccato la cella numero: ' + ((i+1) * (j+1)) );
+                console.log('Hai cliccato la cella numero: ' + ((i*10) + (j + 1)) );
             })
     
             elementDOM.append(cellElement);
